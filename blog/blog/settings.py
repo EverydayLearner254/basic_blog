@@ -132,6 +132,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 VENV_PATH = os.path.join(BASE_DIR)
 STATIC_ROOT = os.path.join(VENV_PATH, 'static/_root/')
 MEDIA_ROOT = os.path.join(VENV_PATH, 'media_root')
+TINYMCE_JS_ROOT = os.path.join(STATIC_JS_DIR, "tiny_mce")
+TINYMCE_JS_URL = os.path.join(TINYMCE_JS_ROOT, "tiny_mce.js")
 
 # Tinymce
 
