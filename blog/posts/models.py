@@ -17,6 +17,7 @@ class Author(models.Model):
 
 class Category(models.Model):
     title = models.CharField(max_length=20)
+
     def __str__(self):
         return self.title
 
@@ -33,7 +34,8 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField()
     timestamp = models.DateTimeField(default=timezone.now)
-    content = HTMLField()
+    content = models.TextField('Content', max_length=500)
+    # content = HTMLField()
     # comment_count = models.IntegerField(default=0)
     # view_count = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    'django_summernote',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -89,6 +90,19 @@ DATABASES = {
     }
 }
 
+""" DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blog',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        # 'OPTIONS' : {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        # },
+    }
+} """
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -173,5 +187,11 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 )
+SUMMERNOTE_CONFIG = {
+    'width': '100%',
+    'height': '480',
+    'attachment_filesize_limit': 50000,
+}
 
 SITE_ID = 1
+X_FRAME_OPTIONS = 'SAMEORIGIN'
